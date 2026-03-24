@@ -1,3 +1,6 @@
 import "../../css/style.css";
+import { phoneArrow } from "../modules/phoneArrow";
+import { menu } from "../modules/menu";
 
-console.log("main is here");
+phoneArrow();
+menu();
