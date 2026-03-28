@@ -8132,6 +8132,25 @@ div.wave-block:nth-child(17):after {
   }
 }
 
+/* Класс ошибки для родителя чекбокса */
+.checkbox-error {
+    color: #ff4c4c; /* Красный текст */
+    animation: shake 0.5s ease-in-out; /* Запуск анимации */
+}
+
+/* Красная обводка для самого квадратика */
+.checkbox-error .checkbox__label::before {
+    border-color: #ff4c4c !important;
+    box-shadow: 0 0 5px rgba(255, 76, 76, 0.5);
+}
+
+/* Сама анимация тряски */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
 .item-hover {
   position: absolute;
   visibility: hidden;

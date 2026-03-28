@@ -1,4 +1,4 @@
-import { animate } from "./helpers";
+import { animate, close } from "./helpers";
 
 export const modal = () => {
   const popup = document.querySelector(".popup-repair-types");
@@ -8,13 +8,13 @@ export const modal = () => {
   if (!popup) return;
 
   const appear = () => {
-    if (menuBody && menuBody.classList.contains('__active')) {
-      menuBody.classList.remove('__active');
-      menuBtn?.classList.remove('__active');
+    if (menuBody && menuBody.classList.contains("__active")) {
+      menuBody.classList.remove("__active");
+      menuBtn?.classList.remove("__active");
     }
 
-    popup.style.display = "block";
     popup.style.visibility = "visible";
+    popup.style.display = "flex"
     popup.style.opacity = 0;
 
     if (window.innerWidth < 768) {
@@ -55,8 +55,7 @@ export const modal = () => {
       e.preventDefault();
       appear();
     }
-    if (e.target.closest(".close") || (e.target === popup)) {
-       hide();
-    }
+
+    close(e, ".popup-repair-types", hide);
   });
 };
