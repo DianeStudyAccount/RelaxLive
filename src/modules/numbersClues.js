@@ -1,6 +1,5 @@
 export const numbersClues = () => {
   const inner = document.querySelector(".formula-slider");
-  const allSlides = inner.querySelectorAll(".formula-slider__slide");
   const slidesOriginal = document.querySelectorAll(".formula-slider__slide");
   const [prevBtn, nextBtn] = [".slider-arrow_left", ".slider-arrow_right"].map(s => document.querySelector(s));
   const desktopItems = document.querySelectorAll(".formula-item");
@@ -37,7 +36,8 @@ export const numbersClues = () => {
   inner.appendChild(firstClone);
   inner.insertBefore(lastClone, slidesOriginal[0]);
 
-  let currentIndex = 1;
+  const allSlides = inner.querySelectorAll(".formula-slider__slide");
+  let currentIndex = 1; 
   let isMoving = false;
 
   const updateSlider = (animation = true) => {
@@ -50,6 +50,7 @@ export const numbersClues = () => {
       const popup = slide.querySelector(".formula-item-popup");
       const isActive = i === currentIndex;
 
+      // Стилизация активного/неактивного слайда
       slide.style.opacity = isActive ? "1" : "0.4";
       slide.style.transform = isActive ? "scale(1.4)" : "scale(0.8)";
       slide.style.zIndex = isActive ? "10" : "1";
@@ -57,7 +58,7 @@ export const numbersClues = () => {
       if (popup) {
         popup.style.opacity = isActive ? "1" : "0";
         popup.style.visibility = isActive ? "visible" : "hidden";
-        
+
         if (isActive) {
           const rect = popup.getBoundingClientRect();
           rect.top < 0 ? popup.classList.add("popup-bottom") : popup.classList.remove("popup-bottom");

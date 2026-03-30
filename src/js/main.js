@@ -7,6 +7,7 @@ import { phoneNum } from "../modules/phoneNum";
 import { sendData } from "../modules/sendData";
 import { privacyPopup } from "../modules/privacyPopup";
 import { numbersClues } from "../modules/numbersClues";
+import { repairTypes } from "../modules/repairTypes";
 
 phoneArrow();
 menu();
@@ -16,3 +17,4 @@ phoneNum();
 sendData();
 privacyPopup();
 numbersClues();
+repairTypes();
