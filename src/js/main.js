@@ -8,6 +8,7 @@ import { sendData } from "../modules/sendData";
 import { privacyPopup } from "../modules/privacyPopup";
 import { numbersClues } from "../modules/numbersClues";
 import { repairTypes } from "../modules/repairTypes";
+import { portfolio } from "../modules/portfolio";
 
 phoneArrow();
 menu();
@@ -18,3 +19,4 @@ sendData();
 privacyPopup();
 numbersClues();
 repairTypes();
+portfolio();

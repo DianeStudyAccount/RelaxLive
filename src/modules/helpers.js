@@ -10,7 +10,6 @@ const animate = ({ timing, draw, duration }) => {
 };
 
 const close = (e, popupSelector, hideCallback) => {
-  // Проверяем клик на крестик или на подложку (фон)
   if (e.target.closest(".close") || e.target.classList.contains(popupSelector.replace('.', ''))) {
     if (hideCallback) {
       hideCallback();
@@ -18,4 +17,10 @@ const close = (e, popupSelector, hideCallback) => {
   }
 };
 
-export { animate, close };
+const toggleVisibility = (elements, callback) => {
+  elements.forEach((el, i) => {
+    el.style.display = callback(el, i) ? "flex" : "none";
+  });
+};
+
+export { animate, close, toggleVisibility};

@@ -7211,6 +7211,7 @@ div.wave-block:nth-child(17):after {
   margin-top: -8px;
   z-index: 1;
   cursor: pointer;
+  display: none;
 }
 
 @media (max-width: 575px) {
