@@ -9,6 +9,10 @@ import { privacyPopup } from "../modules/privacyPopup";
 import { numbersClues } from "../modules/numbersClues";
 import { repairTypes } from "../modules/repairTypes";
 import { portfolio } from "../modules/portfolio";
+import { contract } from "../modules/contract";
+import { consult } from "../modules/consult";
+import { feedback } from "../modules/feedback";
+import { faq } from "../modules/faq";
 
 phoneArrow();
 menu();
@@ -20,3 +24,7 @@ privacyPopup();
 numbersClues();
 repairTypes();
 portfolio();
+contract();
+consult();
+feedback();
+faq();

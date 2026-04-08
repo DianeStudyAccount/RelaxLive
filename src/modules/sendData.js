@@ -6,7 +6,7 @@ export const sendData = () => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
 
-        let form = btn.previousElementSibling;
+        let form = btn.closest("form");
 
         if (!form || form.tagName !== "FORM") {
           form = btn
@@ -29,26 +29,20 @@ export const sendData = () => {
         }
 
         const formData = new FormData(form);
-        const data = {};
+        const data = Object.fromEntries(formData.entries());
 
-        formData.forEach((val, key) => {
-          data[key] = val;
-        });
-
-        fetch("server.php", {
+        fetch("https://jsonplaceholder.typicode.com/posts", {
           method: "POST",
           headers: {
             "Content-type": "application/json",
           },
           body: JSON.stringify(data),
-        }).then((res) => {
-          if (res.ok) {
+        })
+          .then((res) => {
             console.log("data sent");
             form.reset();
-          } else {
-            console.log("error");
-          }
-        });
+          })
+          .catch(() => console.log("Ошибка сети"));
       });
     }
   });

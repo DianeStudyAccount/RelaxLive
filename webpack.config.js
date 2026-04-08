@@ -16,7 +16,6 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        // Порядок важен: сначала style-loader, потом css-loader
         use: ["style-loader", "css-loader"],
       },
       {
@@ -51,4 +50,5 @@ module.exports = {
     port: 3000,
     open: true,
   },
+  
 };

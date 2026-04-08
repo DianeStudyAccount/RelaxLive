@@ -1204,7 +1204,7 @@ template,
   .formula-slider-wrap {
     margin-top: -20px;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
   }
@@ -8477,7 +8477,7 @@ div.wave-block:nth-child(17):after {
 
 @media (max-width: 575px) {
   #reviews-arrow_left {
-    top: 117%;
+    top: 50%;
     left: 55px;
   }
 }
@@ -8489,7 +8489,7 @@ div.wave-block:nth-child(17):after {
 
 @media (max-width: 575px) {
   #reviews-arrow_right {
-    top: 117%;
+    top: 50%;
     right: 55px;
   }
 }
