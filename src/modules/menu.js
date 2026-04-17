@@ -4,7 +4,8 @@ export const menu = () => {
   const closeMenu = document.querySelector(".close-menu");
 
   menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // клик не идет дальше к документу
+    e.stopPropagation(); 
+    
     menuBtn.classList.toggle("__active");
     menuBody.classList.toggle("__active");
   });
