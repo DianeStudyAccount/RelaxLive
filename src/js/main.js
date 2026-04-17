@@ -13,6 +13,7 @@ import { contract } from "../modules/contract";
 import { consult } from "../modules/consult";
 import { feedback } from "../modules/feedback";
 import { faq } from "../modules/faq";
+import { renderRepairTypes } from "../modules/renderRepairTypes";
 
 phoneArrow();
 menu();
@@ -28,3 +29,4 @@ contract();
 consult();
 feedback();
 faq();
+renderRepairTypes();

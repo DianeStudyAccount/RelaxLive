@@ -65,7 +65,7 @@ export const portfolio = () => {
     updateCounters(popupIndex, slides.length);
   };
 
-  arrowRight?.addEventListener("click", () => {
+  arrowRight.addEventListener("click", () => {
     const isMobile = window.innerWidth < 1025;
     const max = isMobile ? mSlides.length - 1 : dSlides.length - 3;
     
@@ -75,7 +75,7 @@ export const portfolio = () => {
     }
   });
 
-  arrowLeft?.addEventListener("click", () => {
+  arrowLeft.addEventListener("click", () => {
     if (currentIndex > 0) {
       currentIndex--;
       updateUI();

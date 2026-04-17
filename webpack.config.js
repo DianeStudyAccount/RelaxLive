@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     main: "./src/js/main.js",
     admin: "./src/js/admin.js",
+    table: "./src/js/table.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -22,13 +23,13 @@ module.exports = {
         test: /\.html$/i,
         loader: "html-loader",
       },
-     {
-  test: /\.(png|jpg|jpeg|gif|svg)$/i,
-  type: "asset/resource",
-  generator: {
-    filename: "images/[name].[hash:6][ext]", 
-  },
-},
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[name].[hash:6][ext]",
+        },
+      },
     ],
   },
   plugins: [
@@ -37,10 +38,17 @@ module.exports = {
       filename: "index.html",
       chunks: ["main"],
     }),
+
     new HtmlWebpackPlugin({
       template: "./admin/index.html",
       filename: "admin.html",
       chunks: ["admin"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./admin/table.html",
+      filename: "table.html",
+      chunks: ["table"],
     }),
   ],
   devServer: {
@@ -50,5 +58,4 @@ module.exports = {
     port: 3000,
     open: true,
   },
-  
 };

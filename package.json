@@ -5,12 +5,14 @@
   "scripts": {
     "start": "webpack serve --config webpack.config.js",
     "dev": "webpack serve --mode development --config webpack.config.js",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "server": "json-server --watch db/db.json --port 4545"
   },
   "devDependencies": {
     "css-loader": "^7.1.4",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.6",
+    "json-server": "^1.0.0-beta.15",
     "style-loader": "^4.0.0",
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.2",
